@@ -1,0 +1,159 @@
+* {
+	font-family: roboto, sans-serif;
+}
+
+body.noScroll { /* ...or body.dialogShowing */
+  overflow: hidden;
+}
+
+body {
+	background-color: #3f55af;
+}
+#HexCalc {
+	color: white;
+	margin: auto;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	text-align: center;
+	font-size: 96px
+}
+
+#tabs {
+	background-color: white;
+	
+}
+
+#tabLabel {
+	color: #3f55af;
+}
+
+#tabLabel convert {
+	
+}
+
+#tab {
+	background-color: #ffffff;
+	color: #3f55af;
+}
+
+
+
+
+
+#card {
+	width: 90%;
+	height: auto;
+	background-color: #ffffff;
+	margin-right: 5%;
+	margin-left: 5%;
+	margin-bottom: 20px;
+	margin: auto;
+	padding-bottom: 20px;
+	border-radius: 3px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);	
+}
+
+#tabHeader {
+	background-color: #fff;
+}
+
+#whiteSpace {
+	height: 9px;
+}
+
+#inputField {
+	display: block;
+	margin: auto;
+	width: 85%;
+}
+
+#outputField {
+	display: block;
+	margin: auto;
+	width: 85%;
+}
+
+#inputRadios {
+	display: block;
+	text-align: center;
+	margin-top: 30px;
+	
+}
+
+#outputRadios {
+	margin-top: 30px;
+	display: block;
+	text-align: center;
+	
+}
+
+
+#fromHexButton {
+	margin-right: 5%;
+	margin-left: 5%
+}
+
+#toHexButton {
+	margin-right: 5%;
+	margin-left: 5%
+}
+
+#convertButton {
+	display: block;
+	margin: auto;
+}
+
+#helpButton {
+	display: block;
+	margin-left: auto;
+	margin-right: 5%;
+}
+
+#helpButtonIcon {
+	color: #777;
+}
+
+#helpTitle {
+
+	text-align: left;
+}
+
+#closeDialogButton {
+	position: absolute;
+	right: 0;
+}
+
+#helpTop {
+	display: flex;
+	position: relative;
+	
+}
+
+#historyGroup {
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: center;
+	max-height: 120px;
+}
+
+
+
+.mdl-snackbar {
+	text-align: center;
+}
+
+#underConstruction {
+	padding: 20px;
+	font-weight: 400;
+	text-align: center;
+}
+
+footer {
+	position: absolute;
+	bottom: 0;
+	margin: 20px;
+	color: #fff7;
+	font-size: 10px;
+	text-align: center;
+	width: 100%;
+}

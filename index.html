@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CodeConvert</title>
+		<link rel="stylesheet" href="stylesheet.css">
+		<link rel="vote" href="vote.html">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+		<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+		<script src="main.js"></script>
+	</head>
+	<body>
+		<h1 id="HexCalc"><b>CodeConvert</b></h1>
+		<!-- Copy SnackBar -->
+		<div id="demo-toast-example" class="mdl-js-snackbar mdl-snackbar">
+			<div class="mdl-snackbar__text"></div>
+			<button class="mdl-snackbar__action" type="button"></button>
+		</div>
+		<!-- Help Dialog -->
+		<dialog class="mdl-dialog">
+			<span id="helpTop">
+				<button class="mdl-button mdl-js-button mdl-button--icon closeDialog" id="closeDialogButton">
+					<i class="material-icons close">close</i>
+				</button>
+				<h4 class="mdl-dialog__title" id="helpTitle">Help</h4>
+			</span>
+			<div class="mdl-dialog__content">
+				<p>
+					Click the output line to copy converted number to your clipboard.
+				</p>
+				<p>
+					Your previous conversions are displayed below and can be copied too!
+				</p>
+				<p>
+					Spaces, dashes, and other irrelevant symbols will be ignored.
+				</p>
+			</div>
+		</dialog>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs" id="card">
+			<header class="mdl-layout__header" id="tabHeader">
+				<div id="whiteSpace"></div>
+				<!-- Tabs -->
+				<div class="mdl-layout__tab-bar mdl-js-ripple-effect" id="tabHeader">
+					<a href="#fixed-tab-1" class="mdl-layout__tab is-active" id="tab">Convert</a>
+					<a href="#fixed-tab-2" class="mdl-layout__tab" id="tab">Calculate</a>
+				</div>
+			</header>
+
+			<main class="mdl-layout__content" id="tabPages">
+				<section class="mdl-layout__tab-panel is-active" id="fixed-tab-1">
+					<div class="page-content">
+						<!-- Input Radios -->
+						<span id="inputRadios">
+							<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="fromDec" id="fromDecButton">
+								<input type="radio" id="fromDec" class="mdl-radio__button" name="input" value="fromDec" checked>
+								<span class="mdl-radio__label">Decimal</span>
+							</label>
+							<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="fromHex" id="fromHexButton">
+								<input type="radio" id="fromHex" class="mdl-radio__button" name="input" value="fromHex">
+								<span class="mdl-radio__label">Hex</span>
+							</label>
+							<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="fromBi" id="fromBiButton">
+								<input type="radio" id="fromBi" class="mdl-radio__button" name="input" value="fromBi">
+								<span class="mdl-radio__label">Binary</span>
+							</label>
+						</span>
+						<!-- Input Text -->
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id="inputField">
+							<input class="mdl-textfield__input" type="text" id="inputText">
+							<label class="mdl-textfield__label" for="sample3">Input</label>
+						</div>
+						<!-- Convert Button -->
+						<span id="functionButtons">
+							<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" id="convertButton" onClick="convert()"><i class="material-icons">swap_vert</i>Convert
+							</button>
+						</span>
+						<!-- Output Radios -->
+						<span id="outputRadios">
+							<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="toDec" id="toDecButton">
+								<input type="radio" id="toDec" class="mdl-radio__button" name="output" value="toDec" onclick="convert()" checked>
+								<span class="mdl-radio__label">Decimal</span>
+							</label>
+							<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="toHex" id="toHexButton">
+								<input type="radio" id="toHex" class="mdl-radio__button" name="output" value="toHex" onclick="convert()">
+								<span class="mdl-radio__label">Hex</span>
+							</label>
+							<label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="toBi" id="toBiButton">
+								<input type="radio" id="toBi" class="mdl-radio__button" name="output" value="toBi" onclick="convert()">
+								<span class="mdl-radio__label">Binary</span>
+							</label>
+						</span>
+						<!-- Output Text -->
+						<div class="mdl-textfield mdl-js-textfield" id="outputField">
+							<input class="mdl-textfield__input" type="text" id="outputText" readonly="readonly" onclick="copyToClip()">
+							<label class="mdl-textfield__label" for="outputText" id="outputTextLabel">Output</label>
+						</div>
+
+						<div id="historyGroup">
+
+						</div>
+						<!-- Help Button -->
+						<button class="mdl-button mdl-js-button mdl-button--icon" id= "helpButton" onclick="showHelp()">
+							<i class="material-icons" id="helpButtonIcon">help_outline</i>
+						</button>
+						<div class="mdl-tooltip mdl-tooltip--top" data-mdl-for="helpButton"> Help </div>
+					</div>
+				</section>
+				<section class="mdl-layout__tab-panel" id="fixed-tab-2">
+					<div class="page-content" id="underConstruction">
+						<!-- Your content goes here -->
+						This feature is still under construction, check back later for more updates!
+					</div>
+				</section>
+			</main>
+		</div>
+		<footer>This website was made using Material Lite Components for Web found at getmdl.io</footer>
+	</body>
+</html>
